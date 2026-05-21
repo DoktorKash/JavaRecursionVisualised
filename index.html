@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Recursion Stack Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Visualizing Recursion: printTo5(i)</h1>
+
+  <main class="layout">
+    <section class="panel stack-panel">
+      <h2>CALL STACK</h2>
+      <div id="stack"></div>
+    </section>
+
+    <section class="panel step-panel">
+      <h2>CURRENT STEP</h2>
+
+      <div id="icon">↓</div>
+
+      <h3 id="message">Press Next Step to begin</h3>
+
+      <p id="details"></p>
+
+      <div class="code-box">
+<pre><code>static void printTo5(int i) {
+    if (i > 5) return;
+
+    System.out.println(i);
+
+    printTo5(i + 1);
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="panel console-panel">
+      <h2>CONSOLE OUTPUT</h2>
+      <pre id="console"></pre>
+    </section>
+  </main>
+
+  <section class="controls">
+    <button onclick="previousStep()">← Previous Step</button>
+    <span id="counter">Step 0 of 0</span>
+    <button onclick="nextStep()">Next Step →</button>
+    <button class="reset" onclick="reset()">Reset</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
