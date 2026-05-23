@@ -130,3 +130,21 @@ button.reset {
   font-size: 20px;
   font-weight: bold;
 }
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  background: #7b1fd1;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  background: #9b35ff;
+}
